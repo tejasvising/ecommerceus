@@ -33,7 +33,7 @@ const ProductSlug = () => {
         <Tab.Group as="div" className="flex flex-col-reverse">
           {/* Image Selector */}
           <div className="hidden mt-6 w-full max-w-2xl mx-auto sm:block lg:max-w-none">
-            <Tab.List className="grid grid-cols-4 gap-6">
+            <Tab.List className="grid grid-cols-4 gap-8">
               {data.image.map((image) => (
                 <Tab
                   key={image._key}
@@ -61,7 +61,7 @@ const ProductSlug = () => {
             </Tab.List>
           </div>
 
-          <Tab.Panels className="w-full aspect-w-1 aspect-h-1">
+          <Tab.Panels className="w-full aspect-ratio: auto">
             {data.image.map((image) => (
               <Tab.Panel key={image._key}>
                 <img
@@ -93,9 +93,9 @@ const ProductSlug = () => {
             <div className="mt-10 flex sm:flex-col-1">
               <button
                 onClick={() => addToCart(data)}
-                className="w-full flex-1 bg-indigo-600 border border-transparent rounded-md py-3 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-500"
+                className="w-full flex-1 bg-indigo-600 border border-transparent rounded-md py-3 flex items-center justify-center text-base font-medium text-white hover:shadow-2xl hover:rounded-lg"
               >
-                Add To Bag
+                Add To  Cart
               </button>
             </div>
           </div>
